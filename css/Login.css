@@ -107,7 +107,7 @@ input {
     box-sizing: border-box;
 }
 
-form .username {
+form .username, .password{
     position: relative;
     border-bottom: 2px solid #adadad;
     margin: 30px 0;
@@ -154,6 +154,50 @@ form .username {
 
 .username input:focus~span::before,
 .username input:focus~span::before {
+    width: 100%;
+}
+
+
+.password input {
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+    color: white;
+}
+
+.password label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #c2c1c1;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+}
+
+.password span::before {
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: white;
+    transition: .5s;
+}
+
+.password input:focus~label,
+.password input:focus~label {
+    top: -5px;
+    color: white;
+}
+
+.password input:focus~span::before,
+.password input:focus~span::before {
     width: 100%;
 }
 
