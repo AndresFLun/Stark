@@ -84,14 +84,18 @@ input {
 }
 
 .formulario {
-    border: 1px solid silver;
-    padding-top: 20px;
+    width: 500px;
+    max-width: 100%;
+    margin: auto;
+    margin-top: -10px;
+    padding: 20px;
+    background:rgb(2, 5, 54) ;
+    box-shadow: 0 0 20px 1px rgba(0,0,0,0.3);
     position: absolute;
+    border: 1px solid silver;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -40%);
-    width: 400px;
-    background: rgb(2, 5, 54);
     border-radius: 10px;
 }
 
@@ -101,117 +105,35 @@ input {
     border-bottom: 1px solid silver;
     color: white;
 }
-
-.formulario form {
-    padding: 0 40px;
-    box-sizing: border-box;
+.input, .label, .submit{
+    display: block;
+    width: 91%;
+    font-size: 1.3em;
 }
-
-form .username, .password{
-    position: relative;
-    border-bottom: 2px solid #adadad;
-    margin: 30px 0;
+.input{
+    padding: 20px;
+    background: rgba(0,0,0,0.1);
+    border: 1px solid rgb(255, 255, 255);
+    margin-bottom: 40px;
+    margin-top: 40px;
+    margin-left: 1px;
     color: white;
 }
-
-.username input {
-    width: 100%;
-    padding: 0 5px;
-    height: 40px;
-    font-size: 16px;
-    border: none;
-    background: none;
-    outline: none;
-    color: white;
+.input:focus{
+    outline: 1px solid rgb(0,0,0,0.7);
 }
-
-.username label {
+.input:focus+.label{
+    margin-top: -130px;
+}
+.label{
+    padding-left: 15px;
     position: absolute;
-    top: 50%;
-    left: 5px;
-    color: #c2c1c1;
-    transform: translateY(-50%);
-    font-size: 16px;
-    pointer-events: none;
-}
-
-.username span::before {
-    content: '';
-    position: absolute;
-    top: 40px;
-    left: 0;
-    width: 0%;
-    height: 2px;
-    background: white;
-    transition: .5s;
-}
-
-.username input:focus~label,
-.username input:focus~label {
-    top: -5px;
+    margin-top: -85px;
+    z-index: -20;
+    color: rgba(0,0,0,0.5);
+    transition: all 0.2s;
     color: white;
 }
-
-.username input:focus~span::before,
-.username input:focus~span::before {
-    width: 100%;
-}
-
-
-.password input {
-    width: 100%;
-    padding: 0 5px;
-    height: 40px;
-    font-size: 16px;
-    border: none;
-    background: none;
-    outline: none;
-    color: white;
-}
-
-.password label {
-    position: absolute;
-    top: 50%;
-    left: 5px;
-    color: #c2c1c1;
-    transform: translateY(-50%);
-    font-size: 16px;
-    pointer-events: none;
-}
-
-.password span::before {
-    content: '';
-    position: absolute;
-    top: 40px;
-    left: 0;
-    width: 0%;
-    height: 2px;
-    background: white;
-    transition: .5s;
-}
-
-.password input:focus~label,
-.password input:focus~label {
-    top: -5px;
-    color: white;
-}
-
-.password input:focus~span::before,
-.password input:focus~span::before {
-    width: 100%;
-}
-
-.recordar {
-    margin: -5px 0 20px 5px;
-    text-align: center;
-    color: white;
-    cursor: pointer;
-}
-
-.recordar:hover {
-    text-decoration: underline;
-}
-
 input[type="submit"] {
     width: 100%;
     height: 50px;
@@ -229,9 +151,21 @@ input[type="submit"]:hover {
     border-color:black;
     border: 2px solid;
 }
+.fijar{
+    margin-top: -135px;
+}
+.recordar {
+    margin: -5px 0 20px 5px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+}
 
+.recordar:hover {
+    text-decoration: underline;
+}
 .registrarse {
-    margin: 30px 0;
+    margin: 15px 0 5px 0;
     text-align: center;
     font-size: 16px;
     color: white;
