@@ -81,6 +81,7 @@ input {
     outline: 0px;
     width: 300px;
     color: #f2f2f2;
+    
 }
 
 .formulario {
@@ -114,6 +115,22 @@ form .username, .email, .emailconf, .password{
     color: white;
 }
 
+form .termCond {
+    position: static;
+    margin: auto;
+    color: white;
+    
+
+}
+.termCond input{
+    padding: 0px 0px;
+    border: 1px solid #f6f6f6;
+    margin: 2px 2px;
+    display: inline-block;
+
+}
+
+
 .username input {
     width: 100%;
     padding: 0 5px;
@@ -123,6 +140,7 @@ form .username, .email, .emailconf, .password{
     background: none;
     outline: none;
     color: white;
+    
 }
 
 .username label {
@@ -202,13 +220,14 @@ form .username, .email, .emailconf, .password{
 
 .emailconf input {
     width: 100%;
-    padding: 0 5px;
+    padding: 0px 5px;
     height: 40px;
     font-size: 16px;
     border: none;
     background: none;
     outline: none;
     color: white;
+    
 }
 
 .emailconf label {
@@ -219,6 +238,8 @@ form .username, .email, .emailconf, .password{
     transform: translateY(-50%);
     font-size: 16px;
     pointer-events: none;
+    
+
 }
 
 .emailconf span::before {
@@ -264,6 +285,7 @@ form .username, .email, .emailconf, .password{
     pointer-events: none;
 }
 
+
 .password span::before {
     content: '';
     position: absolute;
@@ -274,6 +296,7 @@ form .username, .email, .emailconf, .password{
     background: white;
     transition: .5s;
 }
+
 
 .password input:focus~label,
 .password input:focus~label {
